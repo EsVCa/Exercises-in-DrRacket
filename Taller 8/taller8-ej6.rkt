@@ -1,0 +1,16 @@
+#lang racket
+(define (suma n p s)
+  (if (< n p)
+      (begin
+        (set! s (+ n s))
+        (suma (+ n 1) p s))
+      (printf "la suma es de: ~a" s)
+      )
+  )
+(define (ejercicio)
+  (define p 0)
+  (display "digite el parametro para la suma: ")
+  (set! p (read))
+  (suma 1 p 0)
+  )
+(ejercicio)

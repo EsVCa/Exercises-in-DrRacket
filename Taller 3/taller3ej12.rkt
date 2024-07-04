@@ -1,0 +1,15 @@
+#lang racket
+(define (ganancia x)
+  (- (* 10000 x) 30000))
+(define (progra3)
+
+  (define num1 0)
+
+  (display "Este programa tiene como funcion calcular las ganancias de un teatro un dia. \n
+ Por favor digite el numero de personas que ingreso al evento ese dia: ")
+  (set! num1 (read))
+
+  (define (solucion) (ganancia num1))
+  (display "la ganancia del teatro el dia de hoy fue de: $")
+  (display (solucion))
+  )
